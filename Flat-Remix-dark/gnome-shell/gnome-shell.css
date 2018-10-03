@@ -697,11 +697,11 @@ app menu inside the main app window itself rather than the top bar
 
 /* TOP BAR */
 #panelBox {
-  padding: 5px 10px; }
+  padding: 0px 0px; }
 
 #panel {
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 0px;
   font-weight: normal;
   font-size: 12px;
   height: 24px;
@@ -732,8 +732,8 @@ app menu inside the main app window itself rather than the top bar
     color: white; }
     #panel .panel-button .app-menu-icon {
       -st-icon-style: symbolic;
-      margin-left: 4px;
-      margin-right: 4px; }
+      margin-left: 0px;
+      margin-right: 0px; }
     #panel .panel-button .popup-menu-hover {
       icon-size: 13px;
       font-size: 13px;
@@ -762,7 +762,7 @@ app menu inside the main app window itself rather than the top bar
         color: white; }
   #panel .panel-status-indicators-box,
   #panel .panel-status-menu-box {
-    spacing: 3px; }
+    spacing: 0px; }
   #panel .power-status.panel-status-indicators-box {
     spacing: 0; }
   #panel .screencast-indicator {
@@ -772,7 +772,7 @@ app menu inside the main app window itself rather than the top bar
     background-image: url("assets/view-grid-symbolic.svg");
     background-size: 16px 16px;
     background-position: 50% 50%;
-    margin: 0 3px;
+    margin: 0 0px;
     width: 15px;
     color: transparent; }
 
