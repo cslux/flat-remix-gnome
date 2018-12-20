@@ -968,13 +968,13 @@ app menu inside the main app window itself rather than the top bar
   box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1); }
   .message-list-clear-button.button:hover {
     color: white;
-    background-color: #999999; }
+    background-color: rgba(66, 71, 73, 0.7); }
   .message-list-clear-button.button:active {
     color: white;
-    background-color: #999999; }
+    background-color: rgba(66, 71, 73, 0.7); }
   .message-list-clear-button.button:focus {
     color: white;
-    background-color: #999999; }
+    background-color: rgba(66, 71, 73, 0.7); }
 
 
 .message-list-sections {
@@ -989,7 +989,7 @@ app menu inside the main app window itself rather than the top bar
   margin: 4px;
   border-radius: 2px; }
   .message:hover, .message:focus {
-    background-color: #999999;
+    background-color: rgba(66, 71, 73, 0.7);
     box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
     margin-bottom: 6px;
     margin-top: 2px;
