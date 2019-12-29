@@ -47,7 +47,7 @@ stage {
   border-radius: 0;
   border: none;
   color: #FFF;
-  background-color: #000;
+  background-color: #60636E;
   box-shadow: none;
   font-weight: bold;
   box-shadow: inset 0 -4px 0 rgba(255, 255, 255, 0);
@@ -60,6 +60,26 @@ stage {
     border-radius: 0px 0px 3px 0px; }
   .modal-dialog-linked-button:first-child:last-child {
     border-radius: 0px 0px 3px 3px; }
+  .modal-dialog-linked-button:insensitive {
+    color: #939695;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(40, 20, 73, 0.7);
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none; }
+  .modal-dialog-linked-button:active {
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(66, 71, 73, 0.7);
+    box-shadow: inset 0 0 black;
+    text-shadow: none;
+    icon-shadow: none; }
+  .modal-dialog-linked-button:focus {
+    color: white;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
+    background-color: rgba(66, 71, 73, 0.7);
+    box-shadow: inset 0px 0px 0px 4px white; }
 
 /* Entries */
 StEntry {
@@ -264,7 +284,7 @@ StScrollBar {
   border-radius: 3px; }
 
 .end-session-dialog-shutdown-icon {
-  color: #000;
+  color: #D41919;
   width: 48px;
   height: 48px; }
 
@@ -299,6 +319,12 @@ StScrollBar {
   background-color: #D41A1A;
   color: white; }
   .end-session-dialog .modal-dialog-linked-button:last-child:active {
+    color: white;
+    background-color: rgba(212, 26, 26, 0.7); }
+  .end-session-dialog .modal-dialog-linked-button:last-child:focus {
+    color: white;
+    background-color: rgba(212, 26, 26, 0.7); }
+  .end-session-dialog .modal-dialog-linked-button:last-child:hover {
     color: white;
     background-color: rgba(212, 26, 26, 0.7); }
 
@@ -752,7 +778,7 @@ StScrollBar {
     border: 0;
     background-image: url("assets/view-grid-symbolic.svg");
     background-size: 1.1em;
-    margin: 0 .3em;
+    margin: 0 0.3em;
     width: 1em;
     color: transparent; }
   #panel .remote-access-indicator {
@@ -973,7 +999,11 @@ StScrollBar {
     box-shadow: 0 0 2px 2px rgba(179, 179, 179, 0.3); }
   .message-list-clear-button.button:active {
     color: #19191c;
-    border-color: transparent;
+    border-color: #000;
+    box-shadow: none; }
+  .message-list-clear-button.button:focus {
+    color: #19191c;
+    border-color: #000;
     box-shadow: none; }
 
 .message-list-sections {
@@ -1549,7 +1579,7 @@ StScrollBar {
   background-color: #FFF;
   border: .23em solid transparent;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4); }
-  .notification-banner:hover, .notification-banner:focus {
+  .notification-banner:hover, .notification-banner:focus, .notification-banner:active {
     background-color: #FFF;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.6);
     margin: .5em; }
@@ -1582,7 +1612,7 @@ StScrollBar {
       border-radius: 0; }
     .notification-banner .notification-button:last-child {
       border-radius: 0 0 6px 0; }
-    .notification-banner .notification-button:hover, .notification-banner .notification-buttonfocus {
+    .notification-banner .notification-button:hover, .notification-banner .notification-button:focus, .notification-banner .notification-button:active {
       color: #19191c;
       font-weight: bold; }
 

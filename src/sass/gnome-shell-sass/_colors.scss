@@ -4,6 +4,7 @@ $secondary_color: #000;
 $bg_color: #FFF;
 $highlight_color: lighten(#383C4A, 40%);
 $fg_color: #60636E;
+$button_color: $fg_color;
 $dark_font_color: darken($fg_color, 30%);
 $light_font_color: lighten($fg_color, 30%);
 $panel_font_color: #FFF;
@@ -29,6 +30,7 @@ $color2: #19A187;
 
 @if $variant == 'darkest' {
   $primary_color: #000;
+  $button_color: rgba(66, 71, 73, 0.7);
   $secondary_color: #FFF;
 
   $bg_color: #050505;

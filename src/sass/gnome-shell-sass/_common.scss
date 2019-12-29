@@ -67,8 +67,8 @@ stage {
   outline: 0;
   border-radius: 0;
   border: none;
-  color: $primary_color;
-  background-color: $secondary_color;
+  color: if($variant=='darkest', #FFF, $primary_color);
+  background-color: $button_color;
   box-shadow: none;
   font-weight: bold;
   box-shadow: inset 0 -4px 0 transparentize($bg_color, if($variant == 'light', 1, .6));
@@ -86,6 +86,32 @@ stage {
 
   &:first-child:last-child {
     border-radius: 0px 0px 3px 3px;
+  }
+
+  &:insensitive {
+    color: #939695;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(40, 20, 73, 0.7);
+    box-shadow: none;
+    text-shadow: none;
+    icon-shadow: none;
+  }
+
+  &:active {
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(66, 71, 73, 0.7);
+    box-shadow: inset 0 0 black;
+    text-shadow: none;
+    icon-shadow: none;
+  }
+
+  &:focus {
+    color: white;
+    text-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
+    background-color: rgba(66, 71, 73, 0.7);
+    box-shadow: inset 0px 0px 0px 4px white;
   }
 }
 
@@ -360,7 +386,7 @@ StScrollBar {
 }
 
 .end-session-dialog-shutdown-icon {
-  color: $secondary_color;
+  color: $error_color;
   width: 48px;
   height: 48px;
 }
@@ -405,6 +431,16 @@ StScrollBar {
   color: white;
 
   &:active {
+    color: white;
+    background-color: rgba(#d41a1a, .7);
+  }
+
+  &:focus {
+    color: white;
+    background-color: rgba(#d41a1a, .7);
+  }
+
+  &:hover {
     color: white;
     background-color: rgba(#d41a1a, .7);
   }
@@ -984,8 +1020,8 @@ StScrollBar {
 
     .app-menu-icon {
       -st-icon-style: symbolic;
-      margin-left: 4px;
-      margin-right: 4px;
+      margin-left: if($full-panel == 'true', 0, 4px);
+      margin-right: if($full-panel == 'true', 0, 4px);
       //dimensions of the icon are hardcoded
     }
 
@@ -1031,7 +1067,7 @@ StScrollBar {
 
   .panel-status-indicators-box,
   .panel-status-menu-box {
-    spacing: 2px;
+    spacing: if($full-panel == 'true', 0, 2px);
   }
 
   // spacing between power icon and (optional) percentage label
@@ -1047,7 +1083,7 @@ StScrollBar {
     border: 0;
     background-image: url("assets/view-grid-symbolic.svg");
     background-size: 1.1em;
-    margin: 0 .3em;
+    margin: 0 if($full-panel == 'true', 0, .3em);
     width: 1em;
     color: transparent;
   }
@@ -1341,7 +1377,13 @@ StScrollBar {
 
   &:active {
     color: $dark_font_color;
-    border-color: transparent;
+    border-color: $secondary_color;
+    box-shadow: none;
+  }
+
+  &:focus {
+    color: $dark_font_color;
+    border-color: $secondary_color;
     box-shadow: none;
   }
 }
@@ -2097,7 +2139,7 @@ StScrollBar {
   border: .23em solid transparent;
   box-shadow: $box-shadow;
 
-  &:hover, &:focus {
+  &:hover, &:focus, &:active {
     background-color: $bg_color;
     box-shadow: $hover-box-shadow;
     margin: .5em;
@@ -2150,7 +2192,7 @@ StScrollBar {
       border-radius: 0 0 6px 0;
     }
 
-    &:hover, &focus {
+    &:hover, &:focus, &:active {
       color: $dark_font_color;
       font-weight: bold;
     }
